@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/mystyle.css">
-    <title>The Fashionable Pet | Pet Salon</title>
+    <meta name="author" content="James Wright">
+    <meta name="description" content="This page is part of a website used to show competency in FSDI 104 | JavaScript Fundamentals.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" title="vira-lata-caramelo" author="jpmoura" source="https://www.favicon.cc/?action=icon&file_id=969154#" license="https://creativecommons.org/publicdomain/zero/1.0/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <title>The Fashionable Pet | Boutique Pet Salon</title>
 </head>
 <body>
     <header>
-        <div class="menu-bar">
-            <h1>The Fashionable Pet</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="register.html">Register</a>
-                <a href="services.html">Services</a>
-            </nav>
+        <div id="skiptocontent">
+            <a href="#main-content">Skip to main content</a>
         </div>
+        <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Salon Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarID">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <h1>The Fashionable Pet</h1>
+        <p>Your trusted source for pet welfare</p>   
     </header>
-    <main>
-        <h1>Welcome to The Fashionable Pet</h1>
-        <p>We are a full-service pet spa and boutique.</p>
-        <p>Find us at:</p>
-        <p id="salonAddress"></p>
+    <main id="main-content">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur nemo quasi laudantium nobis doloribus cum exercitationem ex quia perspiciatis pariatur provident ut, suscipit incidunt sit necessitatibus facilis dolor. Excepturi, hic, eveniet ea quos nobis mollitia possimus praesentium error esse adipisci pariatur deleniti ab ipsam soluta ex qui.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est accusamus in necessitatibus incidunt esse architecto facere reiciendis tempore fugit, cum expedita doloremque libero itaque voluptatem sequi odit iste mollitia nulla sunt sint quasi vitae! Rerum inventore expedita nostrum?</p>
     </main>
     <footer>
-        <p>&copy; 2025 Pet Salon</p>
+        <div id="socialLinks"></div>
+        <p>&copy; 2025 <author id="salonName"></author></p>
+        <address id="inlineSalonAddress"></address>
     </footer>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/global.js"></script>
+    <script src="https://kit.fontawesome.com/1aba6f0c63.js" crossorigin="anonymous"></script>
 </body>
 </html>

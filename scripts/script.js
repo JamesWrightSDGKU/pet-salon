@@ -11,10 +11,10 @@ let salon = {
     }
 }
 
-// function getSalonAddress(){
-//     document.getElementById("salonAddress").innerHTML=`<p>${salon.address.streetNumber} ${salon.address.street}</p><p>${salon.address.city}, ${salon.address.state} ${salon.address.zip}</p>`;
-//     // console.log(salon.address.streetNumber);
-// }
+function getSalonAddress(){
+    document.getElementById("salonAddress").innerHTML=`<p>${salon.address.streetNumber} ${salon.address.street}<br>${salon.address.city}, ${salon.address.state} ${salon.address.zip}</p>`;
+    // console.log(salon.address.streetNumber);
+}
 
 // getSalonAddress();
 // getting HTML elements
@@ -36,15 +36,15 @@ function Pet(name,age,gender,service,breed,species){
 
 function register(){
     // get the values from inputs
-    
     // create obj using constructor
     let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputService.value, inputBreed.value, inputSpecies.value);
-
     console.log(newPet);
-
     // push obj into array
-    petList.push(newPet);
-    clearInputs();
+    if(isValid(newPet)){
+        petList.push(newPet);
+        displayRow();
+        clearInputs();
+    }
 }
 
 function clearInputs(){
@@ -56,6 +56,19 @@ function clearInputs(){
     inputSpecies.value="";
 }
 
+// Validations
+function isValid(pet){
+    let validation = true;
+    if(pet.name == ""){
+        validation = false;
+        alert("Please enter the name of the pet.");
+    }
+    if(pet.age < 0){
+        validation = false;
+        alert("Please enter a positive value for the age.")
+    }
+    return validation;
+}
 
 function init(){
     // create three pets
@@ -65,19 +78,7 @@ function init(){
     
     // push the pets into the array
     petList.push(pet1,pet2,pet3);
-    
-    function petCounter(){
-        document.getElementById("petsCounter").innerHTML=`There are ${petList.length} pets registered:`;
-        console.log(petList.length);
-    }
-    petCounter();
-    
-    function petNames(){
-        for(i=0;i<petList.length;i++){
-            document.getElementById("petNames").innerHTML+=`<li>${petList[i].name}</li>`;
-        }
-    }
-    petNames();
+    getSalonAddress();
 }
 
 

@@ -111,8 +111,6 @@ let student4 = {
 }
 let studentList = [student1, student2, student3, student4];
 
-console.log(`email: ${studentList[1].email}, address: ${studentList[1].address}`);
-
 function numStudents(){
     document.getElementById("studentCounter").innerHTML=`There are ${studentList.length} students.`
 }
