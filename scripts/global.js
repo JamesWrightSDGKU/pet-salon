@@ -26,7 +26,6 @@ function addSocialSite(){
     let site3 = new SocialSite("Yelp","https://www.yelp.com","fa-yelp");
 
     salon.socialList.push(site0,site1,site2,site3);
-
 }
 
 function footerSocialLinks(){
@@ -59,4 +58,4 @@ function globalInit(){
     footerContent();
 }
 
-window.onload=globalInit;
+globalInit();

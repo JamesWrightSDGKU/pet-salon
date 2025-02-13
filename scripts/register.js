@@ -5,26 +5,31 @@ let inputGender = document.getElementById("txtGender");
 let inputService = document.getElementById("txtService");
 let inputBreed = document.getElementById("txtBreed");
 let inputSpecies = document.getElementById("txtSpecies");
+let inputClientName = document.getElementById("txtClientName");
 
 class Pet {
-    constructor(name,age,gender,service,breed,species) {
+    constructor(name,age,gender,service,breed,species,clientName) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.service = service;
         this.breed = breed;
         this.species = species;
+        this.clientName = clientName;
     }
 }
 
 function register(){
-    addPet();
-    let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputService.value, inputBreed.value, inputSpecies.value);
+    let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputService.value, inputBreed.value, inputSpecies.value, inputClientName.value);
     console.log(newPet);
     if(isValid(newPet)){
         petList.push(newPet);
         displayRow();
         clearInputs();
+        showAlert("A new pet was added","success");
+        // successful registration message
+    }else{
+        showAlert("Please complete all fields","danger");
     }
 }
 
@@ -35,65 +40,62 @@ function clearInputs(){
     inputService.value="";
     inputBreed.value="";
     inputSpecies.value="";
+    inputClientName.value="";
 }
 
 function isValid(pet){
     let validation = true;
+
+    // reset the style
+    inputName.classList.remove("error");
+    inputAge.classList.remove("error");
+    document.getElementById("alert-error").classList.add("hide");
+
     if(pet.name == ""){
         validation = false;
-        alert("Please enter the name of the pet.");
+        inputName.classList.add("error");
     }
     if(pet.age < 0){
         validation = false;
-        alert("Please enter a positive value for the age.")
+        inputAge.classList.add("error")
     }
     return validation;
 }
 
 function addPet(){
-    let pet1 = new Pet("Fetcher",6,"male","de-shed","Golden Retriever","dog");
-    let pet2 = new Pet("Laika",4,"female","shampoo","Akita","dog");
-    let pet3 = new Pet("Satchmo",8,"male","nail trim","Saint Bernard","dog");
+    let pet1 = new Pet("Fetcher",6,"male","de-shed","Golden Retriever","dog","Jessica");
+    let pet2 = new Pet("Laika",4,"female","shampoo","Akita","dog","Fred");
+    let pet3 = new Pet("Satchmo",8,"male","nail trim","Saint Bernard","dog","Cheryl");
     
     petList.push(pet1,pet2,pet3);
 }
 
-function displayRow(){
-    document.getElementById("registeredPetDisplay").innerHTML=`
-        <h2>Registered Pets</h2>       
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Client #</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Breed</th>
-                    <th scope="col">Species</th>
-                    <th scope="col">Service</th>
-                </tr>
-            </thead>
-            <tbody id="clientTable">
-            </tbody>
-        </table>    
+function removePet(petId){
+    document.getElementById(petId).remove();
+    petList.splice(petId,1);
+    displayRow();
+    numClients();
+    showAlert("The pet was removed","warning");
+}
+
+function showAlert(msg,type){
+    let alertContainer = document.getElementById("alertContainer");
+
+    alertContainer.innerHTML=`
+        <div id="alert-error" class="alert alert-${type}" role="alert">
+            ${msg}
+        </div>
     `;
 
-    let clientRow = document.getElementById("clientTable");
-    let result = "";
-
-    for(let i = 0; i < petList.length; i++){
-        let client = petList[i];
-        result += `
-            <tr>
-                <th scope="row">${i}</th>
-                <td>${client.name}</td>
-                <td>${client.age}</td>
-                <td>${client.gender}</td>
-                <td>${client.breed}</td>
-                <td>${client.species}</td>
-                <td>${client.service}</td>
-            </tr>
-        `
-    }
-    clientRow.innerHTML = result;
+    setTimeout(()=>{
+        document.getElementById("alert-error").remove();
+    },3000);
 }
+
+function init(){
+    globalInit();
+    addPet();
+    numClients();
+}
+
+window.onload = init();

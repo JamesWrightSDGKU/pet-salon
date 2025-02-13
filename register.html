@@ -47,61 +47,77 @@
     </header>
     <main id="main-content">
         <h1>Registration</h1>
+        <div id="alertContainer">
+            <div id="alert-error" class="alert alert-danger hide" role="alert">
+                Please complete all fields.
+            </div>
+        </div>
         <div class="form-container">
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtName">Name:</label>
                 <input type="text" id="txtName">
             </div>
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtAge">Age:</label>
                 <input type="number" min="0" id="txtAge">
             </div>
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtGender">Gender:</label>
-                <select name="gender" id="txtGender">
+                <select class="form-select" name="gender" id="txtGender">
                     <option value="">Select gender</option>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
                     <option value="unknown">unknown</option>
                 </select>
             </div>
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtBreed">Breed:</label>
                 <input type="text" id="txtBreed">
             </div>
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtSpecies">Species:</label>
-                <select name="species" id="txtSpecies">
+                <select class="form-select" name="species" id="txtSpecies">
                     <option value="" disabled selected>Select a species</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
                     <option value="bird">Bird</option>
                 </select>
             </div>
-            <div class="form-control">
+            <div class="mb-3">
                 <label for="txtService">Service:</label>
-                <select name="service" id="txtService">
+                <select class="form-select" name="service" id="txtService">
                     <option value="" disabled selected>Select a service</option>
                     <option value="grooming">Grooming</option>
                     <option value="vaccination">Vaccination</option>
                     <option value="nails">Nails</option>
                 </select>
             </div>
+            <div class="mb-3">
+                <label for="txtClientName">Client Name:</label>
+                <input type="text" id="txtClientName">
+            </div>
             
 
             <div>
-                <button onclick="register()">Register</button>
+                <button class="btn btn-primary" onclick="register()">Register</button>
             </div>
         </div> <!-- end of the form -->
 
     </main>
-    <section id="registeredPetDisplay"></section>
+    <h2>Registered Pets</h2>
+        <div id="petCounter"></div>
+        <button class="btn btn-primary" onclick="displayTable()">Client Table</button>
+        <button class="btn btn-primary" onclick="displayCards()">Client Cards</button>
+        <div id="clientDisplay"></div>
+        
+        
     <footer>
         <div id="socialLinks"></div>
         <p>&copy; 2025 <author id="salonName"></author></p>
         <address id="inlineSalonAddress"></address>
     </footer>
     <script src="./scripts/global.js"></script>
+    <script src="./scripts/display.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="https://kit.fontawesome.com/1aba6f0c63.js" crossorigin="anonymous"></script>
 </body>

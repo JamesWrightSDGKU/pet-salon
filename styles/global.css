@@ -3,8 +3,8 @@ body {
     height: 100%;
 }
 body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
@@ -19,6 +19,16 @@ footer {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.error{
+    background-color: rgb(251, 174, 174);
+    border: 1px solid red;
 }
 
 /* || Accessibility */
