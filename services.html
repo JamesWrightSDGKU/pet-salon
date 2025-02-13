@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/global.css">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <title>The Fashionable Pet | Boutique Pet Salon</title>
 </head>
 <body>
@@ -42,17 +40,39 @@
             </div>
         </div>
     </nav>
-        <h1>The Fashionable Pet</h1>
-        <p>Your trusted source for pet welfare</p>   
-    </header>
-    <main id="main-content">
-        <h1>Services</h1>
+    <h1>The Fashionable Pet</h1>
+    <p>Your trusted source for pet welfare</p>   
+</header>
+<main id="main-content">
+    <h1>Services</h1>
+    
+    <h2>Create a New Service</h2>
+    <div>
+        <div>
+            <label>Title</label>
+            <input type="text" id="txtTitle">
+            <small id="titleRequirementText">This field is required.</small>
+        </div>
+        <div>
+            <label>Price:</label>
+            <input type="number" id="txtPrice">
+            <small id="priceRequirementText">This field is required.</small>
+        </div>
+        <div>
+            <button id="btnRegister">Register</button>
+        </div>
+        </div>
     </main>
     <footer>
         <div id="socialLinks"></div>
         <p>&copy; 2025 <author id="salonName"></author></p>
         <address id="inlineSalonAddress"></address>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> <!-- jQuery JS Library -->
+    <script src="./scripts/store-manager.js"></script>
+    <script src="./scripts/services.js"></script>
     <script src="./scripts/global.js"></script>
     <script src="https://kit.fontawesome.com/1aba6f0c63.js" crossorigin="anonymous"></script>
 </body>

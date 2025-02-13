@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/global.css">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <title>The Fashionable Pet | Boutique Pet Salon</title>
 </head>
 <body>
@@ -42,48 +40,48 @@
             </div>
         </div>
     </nav>
-        <h1>The Fashionable Pet</h1>
-        <p>Your trusted source for pet welfare</p>   
-    </header>
-    <main id="main-content">
-        <h1>Registration</h1>
-        <div id="alertContainer">
-            <div id="alert-error" class="alert alert-danger hide" role="alert">
-                Please complete all fields.
-            </div>
+    <h1>The Fashionable Pet</h1>
+    <p>Your trusted source for pet welfare</p>   
+</header>
+<main id="main-content">
+    <h1>Registration</h1>
+    <div id="alertContainer">
+        <div id="alert-error" class="alert alert-danger hide" role="alert">
+            Please complete all fields.
         </div>
-        <div class="form-container">
-            <div class="mb-3">
-                <label for="txtName">Name:</label>
-                <input type="text" id="txtName">
-            </div>
-            <div class="mb-3">
-                <label for="txtAge">Age:</label>
-                <input type="number" min="0" id="txtAge">
-            </div>
-            <div class="mb-3">
-                <label for="txtGender">Gender:</label>
-                <select class="form-select" name="gender" id="txtGender">
-                    <option value="">Select gender</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                    <option value="unknown">unknown</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="txtBreed">Breed:</label>
-                <input type="text" id="txtBreed">
-            </div>
-            <div class="mb-3">
-                <label for="txtSpecies">Species:</label>
-                <select class="form-select" name="species" id="txtSpecies">
-                    <option value="" disabled selected>Select a species</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="bird">Bird</option>
-                </select>
-            </div>
-            <div class="mb-3">
+    </div>
+    <div class="form-container">
+        <div class="mb-3">
+            <label for="txtName">Name:</label>
+            <input type="text" id="txtName">
+        </div>
+        <div class="mb-3">
+            <label for="txtAge">Age:</label>
+            <input type="number" min="0" id="txtAge">
+        </div>
+        <div class="mb-3">
+            <label for="txtGender">Gender:</label>
+            <select class="form-select" name="gender" id="txtGender">
+                <option value="">Select gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="unknown">unknown</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="txtBreed">Breed:</label>
+            <input type="text" id="txtBreed">
+        </div>
+        <div class="mb-3">
+            <label for="txtSpecies">Species:</label>
+            <select class="form-select" name="species" id="txtSpecies">
+                <option value="" disabled selected>Select a species</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+            </select>
+        </div>
+        <div class="mb-3">
                 <label for="txtService">Service:</label>
                 <select class="form-select" name="service" id="txtService">
                     <option value="" disabled selected>Select a service</option>
@@ -97,25 +95,27 @@
                 <input type="text" id="txtClientName">
             </div>
             
-
+            
             <div>
                 <button class="btn btn-primary" onclick="register()">Register</button>
             </div>
         </div> <!-- end of the form -->
-
+        
     </main>
     <h2>Registered Pets</h2>
-        <div id="petCounter"></div>
-        <button class="btn btn-primary" onclick="displayTable()">Client Table</button>
-        <button class="btn btn-primary" onclick="displayCards()">Client Cards</button>
-        <div id="clientDisplay"></div>
-        
-        
+    <div id="petCounter"></div>
+    <button class="btn btn-primary" onclick="displayTable()">Client Table</button>
+    <button class="btn btn-primary" onclick="displayCards()">Client Cards</button>
+    <div id="clientDisplay"></div>
+    
+    
     <footer>
         <div id="socialLinks"></div>
         <p>&copy; 2025 <author id="salonName"></author></p>
         <address id="inlineSalonAddress"></address>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="./scripts/global.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="./scripts/register.js"></script>
